@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>QuizTime</title>
+  </head>
+  <body class="main_1">
+        
+        <div class="container">  
+            <h1>Let's Hack the Quiz with HackerRank!!</h1> 
+            <div id='quizControls'>
+                <form id='form'>
+                    <input type="submit" id="button" value="Ready To Go">
+                </form>
+            </div>
+
+            <!--this is the empty container - where the Javascript appends the questions from an API call-->
+            <div class="questionContainer"></div>
+
+            <!--Winner screen - gives player option to try again for Quiz-->
+            <div class="winner">
+                <h2>Well Done</h2>
+                <h3>Thanks for taking the quiz. See You on Next Time Best Of Luck Till the Time
+                    <br>Would you like to try again?
+                </h3>
+
+                <!-- Buttons to either replay the Quiz or say goodbye to Player-->
+                <button class="btn btn--yes" onclick="location.reload()">Yes Please</button>
+                <button class="btn btn--no" onclick="confirmClose()">Close</button>
+            </div>
+
+            <!-- Score div -->
+            <div class="score getScore">
+                <!-- Empty spans for players current score, Total number of questions and Correct Question-->
+                <h2><span class='player'></span> Score: <span class="score--change"></span>/<span class="score--total"></span></h2>
+                <h2><span class='player2'></span> Correct-Question: <span class="score--change2"></span>/<span class="score--total2"></span></h2>
+                <h2><span class='player1'></span> Total Question: <span class="score--change1"></span>/<span class="score--total1"></span></h2>
+                
+            </div>
+            
+        </div>
+    <!-- Inline JavaScript linking to app.js file -->
+    <script src='app.js'></script>
+  </body>
+</html>
